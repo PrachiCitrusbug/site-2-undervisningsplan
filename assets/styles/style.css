@@ -846,6 +846,7 @@ button.expand > a{
     gap: 30px;
     margin: 66px 78px 0 120px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .material-container .content-card{
@@ -1053,6 +1054,7 @@ p.panel{
     display: flex;
     gap: 145px;
     padding-left: 60px;
+    flex-wrap: wrap;
 }
 
 .details > h1 {
@@ -1121,4 +1123,34 @@ p.panel{
     background: linear-gradient(246.27deg, #F4E353 21.64%, #EDB031 65.09%);
     height: 10px;
     max-width: 100%;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px){
+    .content-text{
+        margin-right: 0px;
+    }
+    .happening-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .happening-content{
+        margin: 100px 0px;
+    }
+    .happening-circle{
+        margin: 0px;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 0;
+        margin-bottom: 90px;
+    }
+    .happening-circle > img{
+        position: static;
+        transform: translate(0%, 0%);
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .details{
+        gap: 70px;
+    }
 }
