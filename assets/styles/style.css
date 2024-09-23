@@ -839,7 +839,29 @@ button.expand > a{
     margin:0;
 }
 
+.material-container .profile-info{
+    margin-left: 15px;
+}
+
+.profiles{
+    position: relative;
+    z-index: 100;
+}
+
 .material-container .profile-img{
-    border: 2px solid white;
-    height: 40px;
+    border-right: 4px solid white;
+}
+
+.profiles > .profile-img:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 4%;
+    z-index: -1;
+}
+
+.profiles > .profile-img:last-child{
+    position: absolute;
+    top: 0;
+    left: 8%;
+    z-index: -2;
 }
