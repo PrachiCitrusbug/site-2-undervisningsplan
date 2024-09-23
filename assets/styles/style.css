@@ -333,6 +333,7 @@ p.pos {
     height: 200px;
     border-radius: 6px;
     margin-bottom: 16px;
+    object-fit: cover;
 }
 
 .content-card > h1{
@@ -790,4 +791,55 @@ button.expand > a{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.material-container{
+    background-color:rgba(246, 248, 251, 1);
+    padding-bottom: 80px;
+}
+
+.material-container > h1{
+    display: inline-block;
+    margin-top: 80px;
+    margin-left: 120px;
+    position: relative;
+}
+
+.material-container > h1 > img{
+    position: absolute;
+    top: 20%;
+    margin-left: 20px;
+}
+
+.arrow{
+    display: flex;
+    gap: 5px;
+    float: right;
+    margin-top: 88px;
+    margin-right: 78px;
+}
+
+.arrow > div{
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: rgba(237, 242, 247, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container{
+    display: flex;
+    gap: 30px;
+    margin: 66px 78px 0 120px;
+}
+
+.material-container .content-card{
+    margin:0;
+}
+
+.material-container .profile-img{
+    border: 2px solid white;
+    height: 40px;
 }
