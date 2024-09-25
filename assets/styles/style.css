@@ -68,7 +68,7 @@ nav.navbar{
 }
 
 .hero-section{
-    width: 886px;
+    width: 50%;
     height: 395px;
     margin: 106px 458px 172px 96px;
     position: relative;
@@ -662,6 +662,13 @@ a.linked-in > img{
     margin-top: 20px;
 }
 
+.news{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .news-heading > h1{
     font-size: 40px;
     line-height: 48px;
@@ -679,10 +686,11 @@ a.linked-in > img{
 }
 
 .news-card{
-    margin: 66px 120px 61px;
+    margin: 66px auto 61px;
     display: flex;
     gap: 24px;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -712,7 +720,7 @@ button.expand{
     border: 1px solid var(--primary-color);
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0px 3px 12px 0px rgba(23, 59, 88, 0.3);
-    margin: 0 45% 80px;
+    margin: 0 0 80px;
 }
 
 button.expand:hover{
@@ -892,13 +900,15 @@ button.expand > a{
 .card-container{
     display: flex;
     gap: 30px;
-    margin: 66px 78px 0 120px;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin: 66px 78px 0;
+    /* justify-content: center; */
+    overflow-x: scroll;
+    /* flex-wrap: wrap; */
 }
 
 .material-container .content-card{
     margin:0;
+    flex: 1;
 }
 
 .material-container .profile-info{
@@ -945,7 +955,9 @@ button.expand > a{
 .testimonial > .card-container{
     margin: 80px 121px 110px;
     gap: 52px;
-    justify-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
 }
 
 .testimonial-card{
@@ -954,9 +966,10 @@ button.expand > a{
     align-items: center;
     padding: 40px 35.5px;
     width: 366px;
+    height: 404px;
     border: 1px solid rgba(222, 222, 222, 1);
-    box-shadow: 0px 22.34px 17.87px 0px rgba(0, 0, 0, 0.04);
-    box-shadow: 0px 41.78px 33.42px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 22.34px 17.87px 0px rgba(0, 0, 0, 0.04),
+                0px 41.78px 33.42px 0px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-card > .circle{
