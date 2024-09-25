@@ -22,6 +22,12 @@ button:hover, a:hover{
     cursor: pointer;
 }
 
+section, footer, header, nav{
+    max-width: 2000px;
+    margin-right: auto;
+    margin-left: auto; 
+}
+
 body{
     --primary-color: rgba(23, 59, 88, 1);
     --secondary-color: rgba(237, 176, 49, 1);
@@ -30,9 +36,10 @@ body{
     background-color: #fff;
     color: var(--primary-color);
     font-family: 'DM Sans', sans-serif;
+    width: 100%;
 }
 
-.landing-page{
+section.landing-page{
     position: relative;
     height: 50rem;
 }
@@ -526,6 +533,7 @@ p.pos {
     font-weight: 400;
     line-height: 37px;
     margin: 80px 21px 60px;
+    text-align: justify;
 }
 
 .about-team > p > span{
@@ -675,6 +683,7 @@ a.linked-in > img{
     display: flex;
     gap: 24px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .news-card-item{
@@ -762,6 +771,45 @@ button.expand > a{
 
 .content-ad > .slider{
     float: right;
+    position: relative;
+}
+
+.slider > .img-container{
+    width: 674px;
+    height: 500px;
+    display: flex;
+    /* overflow-x: scroll; */
+}
+
+.slider > .img-container > img{
+    width: 100%;
+    height: 100%;
+}
+
+.slider > .img-container > img:first-child{
+    display: block;
+}
+
+.slider-dots{
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    display: flex;
+    gap: 10px;
+}
+
+.slider-dots > a{
+    /* background-color: rgba(255, 255, 255, 1); */
+    border: 1px solid var(--primary-color);
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.slider-dots > a:first-child{
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
 }
 
 .content-text > p{
@@ -1125,10 +1173,7 @@ p.panel{
     max-width: 100%;
 }
 
-@media (min-width: 1024px) and (max-width: 1440px){
-    .content-text{
-        margin-right: 0px;
-    }
+@media (max-width: 1440px){
     .happening-container{
         flex-direction: column;
         align-items: center;
@@ -1152,5 +1197,116 @@ p.panel{
     }
     .details{
         gap: 70px;
+    }
+    .video-container{
+        --container-width: 700px;
+    }
+    .about-content{
+        width: 1020px;
+        margin-bottom: 30px;
+        padding-top: 40px;
+    }
+    .content-card{
+        margin-right: 10px;   
+    }
+    .slider > .img-container{
+        width: 500px;
+        height: 400px;
+    }
+    .content-text > h1{
+        margin-top: 50px;
+    }
+    .content-text{
+        margin-right: 0px;
+        margin-bottom: 36px;
+    }
+}
+
+@media (max-width: 1040px){
+    .content-container{
+        padding: 50px 0;
+    }
+    .video-container{
+        --container-width: 500px;
+    }
+    .about-content{
+        width: 820px;
+        margin-bottom: 20px;
+        padding-top: 24px;
+    }
+    .team-profile{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .mem-profile{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .team-profile-img{
+        float: none;
+        margin-right: 0;
+        margin-bottom: 30px;
+        align-self: center;
+    }
+    a.linked-in{
+        margin-right: 6px;
+    }
+    .content-ad{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .content-ad > .slider{
+        float: none;
+    }
+    .slider{
+        align-self: center;
+    }
+    .slider > .img-container{
+        width: 678px;
+        height: auto;
+    }
+    .content-text{
+        margin-left: 40px;
+    }
+}
+
+@media(max-width: 850px){
+    .content-container{
+        grid-template-columns: repeat(2, auto);
+        
+    }
+    .content-container > h1{
+        grid-column: span 2;
+        margin-bottom: 30px;
+    }
+    .about-content{
+        grid-column: span 1;
+        grid-row: 2 / 3;
+        width: 400px;
+        height: auto;
+        margin: 0 20px 0 0;
+        padding: 20px;
+    }
+    .video-container{
+        grid-column: span 2;
+        --container-width: 700px;
+        margin-top: 20px;
+        align-self: center;
+        justify-self: center;
+    }
+    .content-card{
+        margin-right: 0;   
+    }
+}
+
+@media (max-width: 750px){
+    .contact-links{
+        float: none;
+        margin-top: 20px;
+    }
+    .mem-profile .intro{
+        text-align: justify;
     }
 }
