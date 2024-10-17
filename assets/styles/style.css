@@ -23,7 +23,7 @@ button:hover, a:hover{
 }
 
 section, footer, header, nav{
-    max-width: 2000px;
+    max-width: 1600px;
     margin-right: auto;
     margin-left: auto; 
 }
@@ -1155,7 +1155,7 @@ p.panel{
     text-decoration: underline;
 }
 
-.footer > hr{
+footer > hr{
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -1180,7 +1180,7 @@ p.panel{
     background-color: rgba(255, 255, 255, 0.08);
 }
 
-.footer > div:last-of-type{
+footer > div:last-of-type{
     background: linear-gradient(246.27deg, #F4E353 21.64%, #EDB031 65.09%);
     height: 10px;
     max-width: 100%;
